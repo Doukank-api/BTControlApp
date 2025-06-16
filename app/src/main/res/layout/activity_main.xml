@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Debug Mesajları Kutusu -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/tvDebug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5F5"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:fontFamily="monospace"/>
+    </ScrollView>
+    <!-- Yön Butonları -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- İleri Butonu -->
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="96dp"
+            android:layout_height="80dp"
+            android:text="ileri"
+            android:layout_gravity="center" />
+
+        <!-- Sol ve Sağ Butonları -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="96dp"
+                android:layout_height="80dp"
+                android:text="sol" />
+
+            <Space
+                android:layout_width="128dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="96dp"
+                android:layout_height="80dp"
+                android:text="sağ" />
+        </LinearLayout>
+
+        <!-- Geri Butonu -->
+        <Button
+            android:id="@+id/btnBackward"
+            android:layout_width="96dp"
+            android:layout_height="80dp"
+            android:text="geri"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- Alt Butonlar -->
+    <Button
+        android:id="@+id/btnStartStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth Bağlan"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
